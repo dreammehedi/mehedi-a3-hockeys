@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="light" lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,12 +31,25 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- daisy ui add -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- tailwind css add -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- tailwind config file customization  -->
     <script>
       tailwind.config = {
         theme: {
+          container: {
+            center: "true",
+            padding: {
+              DEFAULT: "1rem",
+            },
+          },
           extend: {
             fontFamily: {
               manrope: ["Manrope", "sans-serif"],
@@ -56,6 +69,120 @@
     </script>
   </head>
   <body class="font-manrope">
-    <h1 class="text-website-primary">Mehedi</h1>
+    <!-- Header Start -->
+    <header class="py-7 md:py-12 lg:py-16">
+      <div class="container">
+        <!-- navigation -->
+        <nav class="flex justify-between items-center">
+          <div class="dropdown flex justify-between items-center gap-4">
+            <!-- humberger menu icon -->
+            <div
+              tabindex="0"
+              role="button"
+              class="block lg:hidden cursor-pointer"
+            >
+              <i class="text-2xl text-website-black ri-menu-2-fill"></i>
+            </div>
+            <!-- logo -->
+            <a
+              class="text-website-black font-extrabold text-2xl md:text-3xl lg:text-4xl"
+              href="#"
+              >Hockey<span class="text-website-primary">’</span>s</a
+            >
+            <!-- mobile menu -->
+            <ul
+              tabindex="0"
+              class="absolute top-[50px] left-0 w-[200px] dropdown-content menu z-[1] shadow bg-base-100 rounded-box"
+            >
+              <li>
+                <a
+                  class="text-website-primary text-base font-bold transition-all duration-300 ease-in hover:text-website-primary hover:font-bold"
+                  href="#"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-website-dark2 text-base font-normal transition-all duration-300 ease-in hover:text-website-primary hover:font-bold"
+                  href="#"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-website-dark2 text-base font-normal transition-all duration-300 ease-in hover:text-website-primary hover:font-bold"
+                  href="#"
+                  >Pages</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-website-dark2 text-base font-normal transition-all duration-300 ease-in hover:text-website-primary hover:font-bold"
+                  href="#"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-website-dark2 text-base font-normal transition-all duration-300 ease-in hover:text-website-primary hover:font-bold"
+                  href="#"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- menu -->
+          <ul class="hidden lg:flex justify-center items-center gap-[44px]">
+            <li>
+              <a
+                class="text-website-primary text-base font-bold transition-all duration-300 ease-in hover:text-website-primary hover:font-bold"
+                href="#"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-website-dark2 text-base font-normal transition-all duration-300 ease-in hover:text-website-primary hover:font-bold"
+                href="#"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-website-dark2 text-base font-normal transition-all duration-300 ease-in hover:text-website-primary hover:font-bold"
+                href="#"
+                >Pages</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-website-dark2 text-base font-normal transition-all duration-300 ease-in hover:text-website-primary hover:font-bold"
+                href="#"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-website-dark2 text-base font-normal transition-all duration-300 ease-in hover:text-website-primary hover:font-bold"
+                href="#"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <!-- button and search icon -->
+          <div class="flex justify-center items-center gap-6">
+            <i
+              class="hidden lg:block text-2xl text-[#89898B] cursor-pointer ri-search-line"
+            ></i>
+            <button
+              class="text-white font-bold text-[18px] md:text-xl px-4 md:px-5 lg:px-6 py-2 md:py-3 lg:py-4 rounded-lg bg-website-primary border border-transparent transiti duration-300 ease-in hover:text-black hover:bg-transparent hover:border-website-primary"
+            >
+              Get Ticket
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Header Stop -->
   </body>
 </html>
